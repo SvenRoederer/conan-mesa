@@ -32,11 +32,15 @@ jobs:
         with:
           python-version: "3.8"
       - name: Install Package Tools
+        env:
+          ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'
         run: |
           pip install bincrafters_package_tools
           conan user
       - name: Generate Job Matrix
         id: set-matrix
+        env:
+          ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'
         run: |
           MATRIX=$(bincrafters-package-tools generate-ci-jobs --platform gha)
           echo "${MATRIX}"
