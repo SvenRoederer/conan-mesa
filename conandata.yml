@@ -1,4 +1,6 @@
 sources:
+  "23.0.0-rc5.tar.xz":
+    url: "https://archive.mesa3d.org/mesa-23.0.0-rc5.tar.xz"
   "22.3.6":
     url: "https://archive.mesa3d.org/mesa-22.3.6.tar.xz"
   "19.2.6":
